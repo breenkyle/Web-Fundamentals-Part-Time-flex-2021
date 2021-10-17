@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOJONARY</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <div class="navigation">
+            <h1>Dojonary</h1>
+            <input id="search" type="text" placeholder="search" name="search" id="myInput">
+            <button id="log-btn" onclick="logOut(this)">Login</button>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div id="definition">
+                    <span class="start">
+                        <h1>ninja</h1>
+                        <span><i>noun</i></span>
+                        <span><h6 id="h6">Plural: <i>ninjas</i></h6></span>
+                        <button id="likes" onclick="message()">13 Likes</button>
+                    </span>
+                    <span class="end">
+                        <p>A practitioner skilled in the <a href="https://en.wikipedia.org/wiki/Japan">Japanese</a> art of <a href="https://en.wikipedia.org/wiki/Ninjutsu">ninjutsu</a></p>
+                    </span>
+                </div>
+                <div id="definition">
+                    <span class="start">
+                        <h1>ninja</h1>
+                        <span><i>noun</i></span>
+                        <span><h6 id="h6">Plural: <i>ninjas</i></h6></span>
+                        <button id="likes" onclick="message()">37 Likes</button>
+                    </span>
+                    <span class="end">
+                        <p>A <a href="https://en.wikipedia.org/wiki/Programmer">programmer</a> who breaks down problems with <a href="https://en.wikipedia.org/wiki/Zen">zen</a>-like focus</p>
+                    </span>
+                </div>
+            </div>
+            <div class="col-2">
+                <div id="addition">
+                    <h2>Dojonary is defined by YOU</h2>
+                    <button id="add-def" onclick="hide(this)">Add Definition</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="actions.js"></script>
+</body>
+</html>

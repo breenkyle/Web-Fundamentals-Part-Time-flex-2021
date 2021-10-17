@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.element{
+    border: 1px solid #333;
+    box-shadow: 4px 4px 4px #999;
+    width: 50px;
+    height: 80px;
+    margin: 10px;
+    padding: 10px;
+}
+
+.element h3, .element p {
+    margin: 5px 0;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Columns</title>
+    <link rel="stylesheet" href="stylewk5.css">
+    <!-- link.css will type up the whole thing auto -->
+</head>
+<body>
+    <div id="container">
+        <div id="navigation">
+            <h1>Company Name</h1>
+            <ul class="navbar"> 
+                <!-- ul>li*3>a -->
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <form action="#">
+                <input class="search" type="text" placeholder="search" name="search" id="myInput">
+                <button onclick="searchBox()">Search</button>
+            </form>
+        </div>
+        <h1 id="page_message">Welcome!</h1>
+        <div class="row">
+            <div class="col">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate consectetur, <span>tempora</span> repellat nostrum autem exercitationem facere amet doloremque cumque, quam voluptates unde recusandae error velit. Natus ratione rem temporibus dolorum?</p>
+                <button onclick="alert(this.innerText)">Alert!</button>
+                <!-- pops up the text inside of the button -->
+            </div>
+            <div class="col-2"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate consectetur, <span>tempora</span> repellat nostrum autem exercitationem facere amet doloremque cumque, quam voluptates unde recusandae error velit. Natus ratione rem temporibus dolorum?</p>
+                <button onclick="alert('This is Kinda fun!')">Alert!</button>
+            </div>
+            <img src="ironcat.png" alt="ironcat">
+            <p> <span id="count">0</span>Favorites</p>
+            <button onclick="addFavorite()">Add to my Favorites</button>
+        </div>
+        <img title="mouse over" src="img/mona-the-rivetertocat.png"
+        onmouseover="this.src='img/ironcat.png'""
+        onmouseout="this.src='img/mona-the-rivetertocat.png'"
+        >
+        <h3 class="footer">© Copyright 2021</h3>
+        <div id="cookie_policy" onclick="this.remove()">
+            <!-- everything in the div goes away, can click anywhere -->
+            <div id="text">
+                <h2 id="message_header">Stop! Cookie Time - OMNom Nom Nom</h2>
+                <p id="message_desc">we like to personalize cookies and content, to provide social media features and to analyse our traffic. <a class="read_more" href="#">Read more...</a></p>
+            </div>
+            <button onclick="acceptCookies()">I Accept</button>
+        </div>
+    </div>
+    <script src="actions.js"></script>
+</body>
+</html>

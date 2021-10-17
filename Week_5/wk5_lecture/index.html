@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Site Wk4</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="navigation">
+            <h1>Company Name</h1>
+            <ul class="navbar">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <form action="#">
+                <input class="search" type="text" placeholder="search" name="search" id="myInput">
+                <button onclick="searchBox()">Search</button>
+            </form>
+        </div>
+        <h1 id="page_message">Welcome</h1>
+        <div class="row">
+            <div class="col">
+                <div class="user_profile">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo eligendi ex facilis officia laborum eius quis perferendis placeat, perspiciatis aspernatur, quia cupiditate quidem quae praesentium.</p>
+                    <button onclick="message()">Alert</button>
+                </div>
+                <div class="education">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo eligendi ex facilis officia laborum eius quis perferendis placeat, perspiciatis aspernatur, quia cupiditate quidem quae praesentium.</p>
+                    <button onclick="showText(this)">Alert Button</button>
+                </div>
+                <div class="coffee">
+                    <form action="#">
+                        <label for="coffee">What is your favorite coffee temp</label>
+                        <select name="coffee" id="" onchange="temp(this)">
+                            <option value="Hot">Hot</option>
+                            <option value="Cold">Cold</option>
+                            <option value="Iced Coffee">Iced Coffee</option>
+                            <option value="Scolding Coffee">Scolding Coffee</option>
+                            <option value="Room Temp Coffee">Room Temp Coffee</option>
+                        </select>
+                    </form>
+                </div>
+            </div>
+            <div class="col-2">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo eligendi ex facilis officia laborum eius quis perferendis placeat, perspiciatis aspernatur, quia cupiditate quidem quae praesentium.</p>
+                <button onclick="this.remove()">Alert</button>
+            </div>
+            <div class="likes">
+                <img src="img/ironcat.png" alt="ironcat">
+                <p><span id="count">0</span> Favorites</p>
+                <button onclick="addFavorite()"> Add to my favorites</button>
+            </div>
+            <div class="laps">
+                <p onclick="addLaps(this)">0</p>
+            </div>
+        </div>
+        <img title="mouse over" src="img/mona-the-rivetertocat.png"
+        onmouseover="this.src='img/ironcat.png'"
+        onmouseout="this.src='img/mona-the-rivetertocat.png'"
+        >
+        <h3 id="footer">© Copyright 2021</h3>
+        <div id="cookie-policy">
+            <div class="cookies_content">
+                <div id="text">
+                    <h2 class="message_header">Stop! Cookie Time - Nom Nom Nom</h2>
+                    <p class="message_desc">We like to personalize cookies and content, to provide social media features and to analyse our traffic. <a href="#">Read more...</a></p>
+                </div>
+                <button onclick="acceptCookies()">I Accept</button>
+            </div>
+            class
+        </div>
+    </div>
+    <script src="actions.js"></script>
+</body>
+</html>
