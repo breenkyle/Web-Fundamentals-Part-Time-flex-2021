@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <div id="titlebar">
+            <h1>Network</h1>
+        </div>
+        <div id="feed">
+            <h1>Your Feed</h1>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div id="user_profile">
+                    <img src="user-circle.png" alt="user_circle" id="userimg">
+                    <a href="gettyimages.com">Add an avatar</a>
+                    <h2>James Doe</h2>
+                </div>
+            </div>
+
+            <div class="col2"> 
+                <div class="feed_actual">
+                    <div  class="likebox">
+                        <div class="header">
+                            <h2>Neil M</h2>
+                            <p id="count1"> 1 Like(s)</p>
+                            <button onclick="add1(this)" id="likebtn1">Like</button>
+                        </div>
+                        <div class="text">
+                            <p>I just set up this new discord bot, let me know what you all think. <a href="https://discord.com/channels/738494436467539968/856658286656749618">link</a></p>
+                        </div>           
+                    </div>
+                    <div  class="likebox">
+                        <div class="header">
+                            <h2>Nicole K</h2>
+                            <p id="count2"> 1 Like(s)</p>
+                            <button onclick="add2(this)" id="likebtn2">Like</button>
+                        </div>
+                        <div class="text">
+                            <p>Just finished my <a href="https://www.google.com/search?q=ninja+comics&oq=ninja+comics&aqs=chrome..69i57j46i175i199i512j0i22i30j0i10i22i30l3j0i22i30l4.3200j0j7&sourceid=chrome&ie=UTF-8">next comic,</a> check it out.</p>
+                        </div>           
+                    </div>
+                    <div  class="likebox">
+                        <div class="header">
+                            <h2>Jim R</h2>
+                            <p id="count3"> 1 Like(s)</p>
+                            <button onclick="add3(this)" id="likebtn3">Like</button>
+                        </div>
+                        <div class="text">
+                            <p>I can't stop listening to the <a href="https://thundercat.bandcamp.com/album/it-is-what-it-is">new album</a>. Who else is liking it?</p>
+                        </div>           
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+    
+
+
+    <script src="script.js"></script>
+</body>
+</html>
