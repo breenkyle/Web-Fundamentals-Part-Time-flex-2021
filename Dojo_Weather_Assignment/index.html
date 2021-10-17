@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>DojoWeather</title>
+</head>
+<body>
+    <div class="navigation">
+        <h1 id="page-title">DojoWeather</h1>
+        <ul class="navbar">
+            <li><a href="#" onclick="message()">Burbank</a></li>
+            <li><a href="#" onclick="message()">Chicago</a></li>
+            <li><a href="#" onclick="message()">Philadelphia</a></li>
+        </ul>
+    </div>
+    <div class="container">
+        <div class="row" id="current-city">
+            <h1>San Jose</h1>
+            <label id="tempSelect">show temperature in</label>
+                <select id="tempdrop">
+                    <!-- onchange="changeTemp(this.value)" -->
+                    <option>°C</option>
+                    <option>°F</option>
+                </select>
+        </div>
+        <div class="row">
+            <div class="col1">
+                <div class="daily_weather">
+                    <h2>Today</h2>
+                    <img src="assets/some_rain.png" alt="some rain">
+                    <h3>some rain</h3>
+                    <span class="highTemp">24°</span>
+                    <!-- id="inputCelcius" type="number" -->
+                    <span class="lowTemp">18°</span>
+                </div>
+            </div>
+            <div class="col2">
+                <div class="daily_weather">
+                    <h2>Tomorrow</h2>
+                    <img src="assets/some_sun.png" alt="some sun">
+                    <h3>some sun</h3>
+                    <span class="highTemp">27°</span>
+                    <!-- id="inputCelcius" type="number" -->
+                    <span class="lowTemp">19°</span>
+                </div>
+            </div>
+            <div class="col3">
+                <div class="daily_weather">
+                    <h2>Friday</h2>
+                    <img src="assets/some_clouds.png" alt="some clouds">
+                    <h3>some coulds</h3>
+                    <span class="highTemp">21°</span>
+                    <!-- id="inputCelcius" type="number" -->
+                    <span class="lowTemp">16°</span>
+                </div>
+            </div>
+            <div class="col4">
+                <div class="daily_weather">
+                    <h2>Saturday</h2>
+                    <img src="assets/some_sun.png" alt="some sun">
+                    <h3>some sun</h3>
+                    <span class="highTemp">26°</span>
+                    <!-- id="inputCelcius" type="number" -->
+                    <span class="lowTemp">21°</span>
+                </div>
+            </div>
+
+        </div>
+        <h3 id="footer">© Copyright 2021</h3>
+        <p>pardon our dust</p>
+        <div id="cookie-policy">
+            <div class="cookies_content">
+                <div id="text">
+                    <h2 class="message_header">Stop! Cookie Time</h2>
+                    <p class="message_desc">We use cookies (sadly not the edible ones) to personalize content and ads, to provide social media features and to analyze our traffic.  <a href="#">Read more...</a></p>
+                </div>
+                <button onclick="acceptCookies()">I Accept</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
