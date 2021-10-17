@@ -1,0 +1,60 @@
+* {
+    outline: 2px solid slateblue;
+}
+
+h1{
+    background-color: rebeccapurple; 
+    color:whitesmoke;
+    font-size: 50px;
+    color: blanchedalmond;
+    text-align: center;
+}
+
+.green {
+    background-color: mediumseagreen;
+    text-align: left;
+}
+
+#red{
+    background-color: tomato;
+    text-align: right;
+}
+.is-centered {
+    text-align: center;
+}
+.is-red {
+    color: red;
+}
+
+#game {
+    width: 320px;
+    height: 240px;
+    overflow: hidden;
+    background: linear-gradient(#1293f5, #bae8ff 80%, #35b236 80%);
+}
+#player {
+    margin-top: 140px;
+    margin-left: 50px;
+}
+
+.quote p {
+    color: darkslategray;
+    font-style: italic;
+}
+
+.header > img {
+    height:75px;
+}
+
+input {
+    padding: 5px;
+    border-color: yellowgreen;
+}
+input[type="text"] {
+    border: none;
+    border-bottom: 2px solid rebeccapurple;
+}
+input[type="submit"] {
+    color:white;
+    background-color: rebeccapurple;
+}
