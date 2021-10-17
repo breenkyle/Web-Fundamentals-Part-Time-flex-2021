@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>web practivces week 6 10-16-21</title>
+</head>
+<body>
+    <h1> OnSelect Example</h1>
+    <select name="food" onchange="pickFood(this)">
+        <option>Pizza</option>
+        <option>Kebabs</option>
+        <option>Sangwich</option>
+        <option>Sushi</option>
+    </select>
+    <button onclick="order()">Order Food</button>
+
+
+    <label>I would like to eat </label>
+    <select onchange="chooseLunch(this)">
+        <option>Tacos</option>
+        <option>Pasta</option>
+        <option>Sushi</option>
+    </select>
+
+    <h1> OnInput - Example</h1>
+    <p> Hello, my name is <span id="name"></span></p>
+    <input type="text" name="name" placeholder="Your name here" oninput="setName(this)">
+
+
+    <!-- <div class="card">
+        <p>Hello my name is:</p>
+        <h3 id="name-tag">Example</h3>
+    </div>
+        
+    <input type="text" value="Example" oninput="setName(this)">
+ -->
+
+    
+
+    <script src="script.js"></script>
+</body>
+</html>

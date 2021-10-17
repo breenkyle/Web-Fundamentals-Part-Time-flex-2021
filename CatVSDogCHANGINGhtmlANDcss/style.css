@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+Body{
+    padding-left: 60px;
+}
+
+#fav-animal {
+    width: 500px;
+}
+
+/* #pet-img {
+    width: 500px;
+} */
+
+.btn {
+    height: 30px;
+    width: 70px;
+    background-color: dodgerblue;
+    color: white;
+    border: none;
+    border-radius: 0px;
+    box-shadow: 4px 4px darkgray;
+    
+}
