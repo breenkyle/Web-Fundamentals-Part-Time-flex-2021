@@ -1,0 +1,58 @@
+.container{
+    width: 960px;
+    height: 400px;
+    margin: 0 auto;
+    /* centers in page*/
+    background-color: silver;
+    display: flex;
+    align-items: center;
+}
+
+.col{
+    background-color: blanchedalmond;
+    padding: 10px;
+    width: 300px;
+}
+
+.col p, .col-2{
+    font-size: 1rem;
+}
+
+.col-2{
+    width: 400px;
+    background-color:lightcyan;
+    /*display: flex;*/
+    border: 1px solid black;
+}
+
+.container-2 {
+    width: 720px;
+    height: 250px;
+    background-color: seagreen;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+}
+.col-3 {
+    width: 220px;
+    padding: 10px;
+    background-color: blanchedalmond;
+    display: inline-block;
+}
+
+#dojo {
+    width: 400px;
+    height: 200px;
+    background-color: grey;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+/*The justify-content property can be applied to the parent to affect the child elements. In this case when we use justify-content on the #dojo it will reposition the ninjas!*/
+    /*center, centers*/
+    /*flex-end, middles and right aligns*/
+    /*space-between pushed out evenly from middle to ends*/
+    /*space-evenly does what it says*/
+    /*space-around   i am not sure*/
+
+

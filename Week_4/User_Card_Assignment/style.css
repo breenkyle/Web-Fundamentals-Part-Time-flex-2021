@@ -1,0 +1,63 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: whitesmoke;
+    padding: 60px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#container{
+    margin: 0 auto;
+    width: 560px;
+    height: 300px;
+    border: lightgray solid 3px;
+    background-color: white;
+}
+
+#row-1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px;
+    height:45px;
+    background-color: rgb(61, 145, 167);
+}
+
+#row-2{
+    padding: 15px;
+
+}
+
+#user{
+    width: 80px;
+    margin-top: -160px;
+    padding-top: 10px;
+}
+
+#row-3{
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+#pin{
+    width: 12px;
+    padding:0 15px;
+}
+
+#row-4{
+    margin: 15px;
+}
+
+#gear{
+    width: 12px;
+    padding: 0 15px;
+}
+
+#row-5{
+    margin: 10px;
+    justify-content: space-evenly;
+    margin-bottom: 10px;
+}

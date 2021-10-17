@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: darkcyan;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+#wrapper {
+    background-color: white;
+    font-family: sans-serif;
+    margin: 0 auto;
+    padding: 20px;
+    width: 970px;
+}
+
+/* Navigation */
+
+#logo {
+    height: 125px;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+}
+
+li {
+    padding-left: 20px;
+}
+
+/* Header */
+
+#info_panel {
+    display: flex;
+    align-items: center;
+}
+
+#heading {
+    /* display: flex;
+    justify-content: space-between; */
+    padding: 20px;
+}
+
+#heading_title {
+    font-size: 32px;
+    padding-bottom: 20px;
+}
+
+#heading_text {
+    text-align: justify;
+}
+
+#github_cats {
+    width: 350px;
+}
+
+/* Main */
+
+main {
+    margin: 15px 0;
+}
+
+.section_title {
+    background-color: navy;
+    color: white;
+    padding: 5px;
+    text-align: center;
+}
+
+#card_section {
+    display: flex;
+    border: 2px solid black;
+    margin: 20px 0;
+    text-align: center;
+}
+
+
+.card {
+    border: 1px solid grey;
+    margin: 10px;
+}
+
+.card_img {
+    width: 250px;
+}
+
+.card_title {
+    text-align: center;
+}
+
+.card_desc {
+    padding: 10px;
+    text-align: justify;
+}
+
+button {
+    padding: 17px;
+}

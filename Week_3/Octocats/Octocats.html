@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Octocats!</title>
+    <link rel="stylesheet" href="octocats.css">
+</head>
+<body>
+    <div id="wrapper">
+        <!-- Navigation SectionBelow -->
+        <div class="nav"> 
+            <img src="dojo_blk_white_small.jpg" alt="coding dojo logo" id="logo">
+            <ul id="navbar">
+                <li><a href="#">Home</a></li>
+                <!-- li*3>a makes multiple on its own-->
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <!-- Header Section below-->
+        <div id="info_panel">
+            <div id="heading">
+                <h1 id="heading_title">Octocats</h1>
+                <p id="heading_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae repellat neque quod magnam quisquam aut error blanditiis architecto, optio quasi aspernatur delectus ipsum? Facilis architecto temporibus enim voluptatibus perferendis itaque placeat fugit illum voluptas nisi?</p>
+            </div>
+            <img src="github.jpg" alt="github" id="github_cats">
+            <!-- this was in the div above, and caused it to mess it up -->
+        </div>
+            
+        <!-- Main Section below -->
+        <main>
+            <h2 class="section_title">Meet The Team!</h2>
+            <id id="card_section">
+                <div class="card" onclick=this.remove()>
+                    <img src="mona-the-rivetertocat.png" alt="Mona the Riveterocat" class="card_img">
+                    <h3 class="card_title">Mona The Rivererocat</h3>
+                    <p class="card_desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam impedit labore culpa veniam magnam praesentium suscipit possimus modi, quos repellendus.</p>
+                    <button onclick="alert('You are about to remove this card')">Remove From Collection</button>
+                </div>
+                <div class="card" onclick=this.remove()>
+                    <img src="dojocat.jpg" alt="Dojocat" class="card_img">
+                    <h3 class="card_title">Dojocat</h3>
+                    <p class="card_desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam impedit labore culpa veniam magnam praesentium suscipit possimus modi, quos repellendus.</p>
+                    <button onclick="alert('You are about to remove this card')">Remove From Collection</button>
+                </div>
+                <div class="card" onclick=this.remove()>
+                    <img src="ironcat.png" alt="Ironcat" class="card_img">
+                    <h3 class="card_title">Ironcat</h3>
+                    <p class="card_desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam impedit labore culpa veniam magnam praesentium suscipit possimus modi, quos repellendus.</p>
+                    <button onclick="alert('You are about to remove this card')">Remove From Collection</button>
+                </div>
+            </id>
+        </main>>
+    <!--  footer for now-->
+        <div id="footer">
+            <h2 class="section_title">&COPYCopyright - 2021</h2>
+        </div>
+    </div>
+    
+
+</body>
+</html>

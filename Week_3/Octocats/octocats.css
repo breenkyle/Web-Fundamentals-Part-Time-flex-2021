@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+    /*resets padding and margins from scratch*/
+}
+body{
+    background-color: darkcyan;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+#wrapper {
+    width: 970px;
+    background-color: white;
+    margin: 0 auto;
+    font-family: sans-serif;
+    padding: 20px;
+}
+
+/* navigation */
+
+#logo{
+    height: 125px;
+}
+
+.nav{
+    /* parent is nav */
+    display: flex;
+    justify-content: space-between;
+}
+
+#navbar{
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    text-decoration: none;
+    /* doesnt go away, because it's hyperlink, need to change A tag*/
+}
+
+li{
+    padding-left: 20px;
+    /* shifted over from edge and moved */
+}
+ /* Header */
+
+#info_panel{
+    display: flex;
+    align-items: center;
+}
+#heading{
+    padding: 20px;
+    /*justify-content: space-between;
+    display: flex;*/
+}
+
+#heading_title{
+    font-size: 32px;
+    padding-bottom: 20px;
+
+}
+
+#heading_text{
+    text-align: justify;
+}
+
+#github_cats{
+    width: 350px;
+    
+}
+/* main */
+
+main{
+    margin: 15px 0;
+}
+
+.section_title {
+    background-color:navy;
+    padding:5px;
+    color:white;
+    text-align:center;
+}
+
+#card_section{
+    display: flex;
+    /* put all cards on same level */
+    border: 2px solid black;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.card{
+    border: 1px solid gray;
+    margin: 10px;
+}
+.card_img{
+    width: 250px;
+}
+
+.card_title {
+    text-align: center;
+}
+
+.card_desc{
+    padding: 10px;
+    text-align: justify;
+}
+
+button {
+    padding: 17px;
+}
