@@ -1,0 +1,130 @@
+//Query: Create 5 different authors: Jane Austen, Emily Dickinson, Fyodor Dostoevsky, William Shakespeare, Lau Tzu
+
+INSERT INTO authors (name, created_at, updated_at)
+VALUES ('Jane Austen', NOW(), NOW()),
+('Emily Dickinson', NOW(), NOW()),
+('Fyodor Dostoevsky', NOW(), NOW()),
+('William Shakespeare', NOW(), NOW()),
+('Lau Tzu', NOW(), NOW());
+
+
+
+//Query: Create 5 books with the following names: C Sharp, Java, Python, PHP, Ruby
+
+INSERT INTO books (title, num_of_pages, created_at, updated_at)
+VALUES ('C Sharp', 100, NOW(), NOW()),
+('Java', 555, NOW(), NOW()),
+('Python', 666, NOW(), NOW()),
+('PHP', 234, NOW(), NOW()),
+('Ruby', 567, NOW(), NOW());
+
+
+
+//Query: Change the name of the C Sharp book to C#
+
+UPDATE books SET 
+title = 'C#'
+WHERE id = 1
+
+
+
+//Query: Change the first name of the 4th author to Bill
+
+UPDATE authors SET
+name = 'Bill Shakespeare'
+WHERE id = 4
+
+
+//Query: Have the first author favorite the first 2 books
+
+INSERT INTO favorites (author_id, book_id, created_at, updated_at)
+VALUES (1, 1, NOW(), NOW()),
+(1, 2, NOW(), NOW());
+
+
+//Query: Have the second author favorite the first 3 books
+
+INSERT INTO favorites (author_id, book_id, created_at, updated_at)
+VALUES (2, 1, NOW(), NOW()),(2, 2, NOW(), NOW()), (2, 3, NOW(), NOW());
+
+
+
+//Query: Have the third author favorite all 5 books
+
+INSERT INTO favorites (author_id, book_id, created_at, updated_at)
+VALUES (3, 1, NOW(), NOW()),(3, 2, NOW(), NOW()), (3, 3, NOW(), NOW()), (3, 4, NOW(), NOW()), (3, 5, NOW(), NOW());
+
+///
+    SELECT * FROM authors
+    JOIN favorites ON authors.id = favorites.author_id
+    JOIN books ON books.id = favorites.book_id;
+///
+
+//Query: Retrieve all the authors who favorited the 3rd book
+
+SELECT * FROM favorites
+JOIN authors ON authors.id = favorites.author_id
+WHERE book_id = 3
+
+    SELECT * FROM books 
+    JOIN favorites on books.id = favorites.book_id
+    JOIN authors on authors.id = favorites.author_id
+    WHERE books.id = 3;
+
+
+
+//Query: Remove the first author of the 3rd book's favorites
+SELECT * FROM favorites
+WHERE book_id = 3
+
+DELETE FROM favorites
+WHERE id = 5;
+//checking list of favorites, 
+            SELECT * FROM authors
+                JOIN favorites ON authors.id = favorites.author_id
+                JOIN books ON books.id = favorites.book_id;
+////
+
+DELETE FROM favorites
+WHERE book_id = 3
+AND author_id = 2;
+
+
+
+
+//Query: Have the 5th author favorite the 2nd book
+
+INSERT INTO favorites (author_id, book_id, created_at, updated_at)
+VALUES (5, 2, NOW(), NOW());
+
+
+
+
+//Query: Find all the books that the 2nd author favorited
+
+SELECT * FROM favorites
+JOIN books ON books.id = favorites.book_id
+WHERE author_id = 2;
+
+
+
+//Query: Find all the authors that favorited to the 5th book
+
+SELECT * FROM favorites
+JOIN authors ON authors.id = favorites.author_id
+WHERE book_id = 5;
+
+
+
+//Query: Find all the authors that favorited to the 2nd book
+
+SELECT * FROM favorites
+JOIN authors ON authors.id = favorites.author_id
+WHERE book_id = 2;
+
+
+//Query: Display all the book titles that the 2nd author favorited
+
+SELECT * FROM favorites
+JOIN books ON books.id = favorites.book_id
+WHERE author_id = 2;

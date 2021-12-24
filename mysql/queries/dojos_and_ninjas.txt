@@ -1,0 +1,54 @@
+INSERT INTO dojos (name)
+VALUES ('Python'),
+('MySQL'),
+('Flask');
+                            // ran this twice by accident
+
+SET SQL_SAFE_UPDATES = 0
+
+DELETE FROM dojos
+WHERE dojos.id = 1 OR 2 OR 3
+                            //deleted the first six dojos, original and dupes
+
+INSERT INTO dojos (name)
+VALUES ('Cattos'),          //id7
+('Doggos'),                 //id8
+('Dragons');                //id9
+
+INSERT INTO ninjas (first_name, last_name, age, created_at, updated_at, dojo_id)
+VALUES ('Victoria', 'von Katze', '18', NOW(), NOW(), 7),
+('Mickey', 'Tuxedo', '15', NOW(), NOW(), 7,
+('Mochi', 'Menace', '2', NOW(), NOW(), 7;
+
+INSERT INTO ninjas (first_name, last_name, age, created_at, updated_at, dojo_id)
+VALUES ('Willow', 'Cattle', '20', NOW(), NOW(), 8),
+('Captain', 'Corgo', '18', NOW(), NOW(), 8),
+('Barry', 'Brindle', '18', NOW(), NOW(), 8);
+
+INSERT INTO ninjas (first_name, last_name, age, created_at, updated_at, dojo_id)
+VALUES ('Drachedanion', 'Ravograx', '28', NOW(), NOW(), 9),
+('Miles', 'Goldenhoard', '35', NOW(), NOW(), 9),
+('Smaug', 'Lonely', '50', NOW(), NOW(), 9);
+
+        //SELECT * FROM ninjas//
+        //WHERE dojo_id = 7//
+
+        //SELECT * FROM ninjas//
+        //WHERE dojo_id = 9//
+
+        //SELECT * FROM ninjas//
+        //WHERE id = 9//
+
+//////  for last three q's
+
+SELECT * FROM dojos
+LEFT JOIN ninjas ON dojos.id = ninjas.dojo_id
+WHERE dojos.id = 4;
+
+SELECT * FROM dojos
+LEFT JOIN ninjas ON dojos.id = ninjas.dojo_id
+	WHERE dojos.id = (SELECT id FROM dojos ORDER BY id DESC LIMIT 1);
+
+
+SELECT * FROM dojos
+WHERE dojos.id = (SELECT dojo_id FROM ninjas ORDER BY dojo_id DESC LIMIT 1);
