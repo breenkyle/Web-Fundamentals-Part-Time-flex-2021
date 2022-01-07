@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+    <link rel="stylesheet" href="bootstrap.css">
+    <title>Dojo Survey</title>
+</head>
+<body>
+    <div class="container col-sm-5 bg-dark text-light mt-5 pb-5 pl-5">
+        <h3 class='pt-5 pb-4 text-success'>Dojo Survey</h3>
+
+        <form action="/process" method="POST" class="form form-group f">
+            <label for="name" class="form-text">Your Name</label>
+            <input type="text" name="name" class="text-muted col-sm-10" value="">
+
+            <label for="location" class="form-text mt-3">Dojo Location</label>
+            <select name="location" id="" class="col-sm-10">
+                <option value="filler">-- Select a Location --</option>
+                <option value="bellevue">Bellevue, WA</option>
+                <option value="burbank">Burbank, CA</option>
+                <option value="chicago">Chicago, IL</option>
+                <option value="san_jose">San Jose, CA</option>
+                <option value="seattle">Seattle, WA</option>
+                <option value="online">ONLINE</option>
+            </select>
+
+            <label for="language" class="form-text mt-3">Favorite Language</label>
+            <select name="language" id="" class="col-sm-10">
+                <option value="filler">-- Select a Language --</option>
+                <option value="css">CSS</option>
+                <option value="c">C#</option>
+                <option value="html">HTML</option>
+                <option value="javascript">JavaScript</option>
+                <option value="python">Python</option>
+            </select>
+
+            <label for="comments" class="form-text mt-3">Comments</label>
+            <textarea name="comments" id="" cols="30" rows="8"></textarea>
+
+            <button type="submit" class="btn btn-success mt-3">Submit</button>
+
+        </form>
+    </div>
+</body>
+</html>
