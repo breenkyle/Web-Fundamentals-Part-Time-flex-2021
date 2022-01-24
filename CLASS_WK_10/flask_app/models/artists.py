@@ -1,0 +1,1 @@
+# every table will be a seperate model ->own file

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Read (All)</title>
+    <link rel="stylesheet" href="../static/css/bootstrap.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center mt-5 mb-5">User</h1>
+        <div class="col-sm-5 mx-auto">
+
+            <table class="table table-striped table-sm">
+                <tbody>
+                    {% for sel in selected%}
+                    <tr>
+                        <td class="font-weight-bold">Full Name</td>
+                        <td>{{sel.first_name}} {{sel.last_name}}</td>
+                    </tr>
+                    <tr>
+                        <td class="font-weight-bold">Email</td>
+                        <td>{{sel.email}}</td>
+                    </tr>
+                    <tr>
+                        <td class="font-weight-bold">Created At</td>
+                        <td>{{sel.created_at}}</td>
+                    </tr>
+                    <tr>
+                        <td class="font-weight-bold">Updated At</td>
+                        <td>{{sel.updated_at}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+            {% for sel in selected%}
+            <div class=" container d-flex justify-content-center">
+
+                <form action="/edit/{{sel.id}}" class="col-s-1">
+                    <button class="btn btn-primary mt-5" type="submit">Edit</button>
+                </form>
+                <form action="/delete/{{sel.id}}" class="col-sm-1">
+                    <button class="btn btn-danger mt-5" type="submit">Delete</button>
+                </form>
+
+                {% endfor %}
+
+            </div>
+            <div class="text-center mt-5 mb-5">
+                <a href="/users" class=" mt-5 mb-5">Home</a>
+            </div>
+</body>
+</html>
