@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-success p-2 justify-content-between">
+        <h3 class="text-white ml-5">CodingDojo Wall</h3>
+        <div class="d-flex">
+            <h3 class="text-white">Welcome, {{ user.first_name }}!</h3>
+            <a class="btn btn-warning ml-5 mr-5" href="/logout">Logout</a>
+        </div>
+    </nav>
+    <div class="container d-flex justify-content-evenly mt-3">
+        <div class="card bg-info col-5 p-4">
+            <h1 class="text-light mb-4">{{ messages|length }} unread message(s)</h1>
+            {% for message in messages %}
+                <div class="card p-2 mb-4">
+                    <p class="card-text">Message from <strong>{{ message.sender }}</strong><span class="text-primary"> (sent {{ message.time_span() }})</span></p>
+                    <p class="card-text pl-5">"{{ message.content }}"</p>
+                    <a href="/destroy/message/{{ message.id }}" class="btn btn-danger float-right">Delete Message</a>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="card bg-info col-5 p-4">
+            <h1 class="text-light">Send Messages</h1>
+            <p class="text-light">You have sent {{sent_messages['Count(*)']}} messages so far</p>
+            {% for u in users %}
+                {% if u.id != session.user_id %}
+                <form class=" p-2"action="/post_message" method="post">
+                    <input type="hidden" name="sender_id" value={{session.user_id}}>
+                    <input type="hidden" name="receiver_id" value={{u.id}}>
+                    <label class="text-light" for="receiver_id">Message to {{u.first_name}}:</label>
+                    <textarea class="form-control mb-2" name="content" id="" cols="30" rows="3"></textarea>
+                    <input type="submit" value="Send Message" class="btn btn-warning float-right">
+                </form>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
